@@ -1,0 +1,63 @@
+From 5c80c699238b9a0bcdaf9f0caa131b0a2096019c Mon Sep 17 00:00:00 2001
+From: Alberto Murillo <alberto.murillo.silva@intel.com>
+Date: Tue, 25 Aug 2015 19:16:47 -0500
+Subject: [PATCH] test
+
+---
+ requirements.txt      | 11 +++++------
+ setup.py              |  2 +-
+ test-requirements.txt |  4 ++--
+ 3 files changed, 8 insertions(+), 9 deletions(-)
+
+diff --git a/requirements.txt b/requirements.txt
+index 6206e8e..d544f88 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -7,13 +7,12 @@ WebOb>=1.2.3
+ eventlet>=0.17.4
+ greenlet>=0.3.2
+ monotonic>=0.3 # Apache-2.0
+-oslo.utils>=2.0.0 # Apache-2.0
+-oslo.concurrency>=2.3.0 # Apache-2.0
+-oslo.config>=2.1.0 # Apache-2.0
+-oslo.log>=1.8.0 # Apache-2.0
++oslo.utils
++oslo.concurrency
++oslo.config
++oslo.log
+ six>=1.9.0
+ oslo.i18n>=1.5.0 # Apache-2.0
+ PasteDeploy>=1.5.0
+-Routes!=2.0,!=2.1,>=1.12.3;python_version=='2.7'
+-Routes!=2.0,>=1.12.3;python_version!='2.7'
++Routes
+ Paste
+diff --git a/setup.py b/setup.py
+index d8080d0..056c16c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -25,5 +25,5 @@ except ImportError:
+     pass
+ 
+ setuptools.setup(
+-    setup_requires=['pbr>=1.3'],
++    setup_requires=['pbr'],
+     pbr=True)
+diff --git a/test-requirements.txt b/test-requirements.txt
+index c012c18..3c9e0b9 100644
+--- a/test-requirements.txt
++++ b/test-requirements.txt
+@@ -3,8 +3,8 @@
+ # process, which may cause wedges in the gate later.
+ 
+ hacking<0.11,>=0.10.0
+-mock>=1.2
+-oslotest>=1.10.0 # Apache-2.0
++mock
++oslotest
+ 
+ # These are needed for docs generation
+ oslosphinx>=2.5.0 # Apache-2.0
+-- 
+2.1.0
+
