@@ -4,7 +4,7 @@
 #
 Name     : oslo.service
 Version  : 0.9.0
-Release  : 2
+Release  : 3
 URL      : http://tarballs.openstack.org/oslo.service/oslo.service-0.9.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-0.9.0.tar.gz
 Summary  : oslo.service library
@@ -20,7 +20,6 @@ BuildRequires : Pygments
 BuildRequires : Routes-python
 BuildRequires : Sphinx-python
 BuildRequires : WebOb-python
-BuildRequires : debtcollector-python
 BuildRequires : discover-python
 BuildRequires : docutils-python
 BuildRequires : eventlet-python
@@ -28,6 +27,7 @@ BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
+BuildRequires : funcsigs-python
 BuildRequires : greenlet-python
 BuildRequires : hacking
 BuildRequires : iso8601-python
@@ -86,6 +86,19 @@ oslo.service
 %package python
 Summary: python components for the oslo.service package.
 Group: Default
+Requires: Babel-python
+Requires: Paste-python
+Requires: PasteDeploy-python
+Requires: Routes-python
+Requires: WebOb-python
+Requires: eventlet-python
+Requires: greenlet-python
+Requires: monotonic-python
+Requires: oslo.concurrency-python
+Requires: oslo.i18n-python
+Requires: oslo.log-python
+Requires: oslo.utils-python
+Requires: six-python
 
 %description python
 python components for the oslo.service package.
