@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+1.2.0
+-----
+
+* Updated from global requirements
+* Fix a race condition in signal handlers
+* Enable py3 mock.patch of RuntimeError
+* Delete python bytecode before every test run
+* Trival: Remove 'MANIFEST.in'
+
 1.1.0
 -----
 
