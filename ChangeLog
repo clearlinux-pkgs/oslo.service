@@ -1,6 +1,19 @@
 CHANGES
 =======
 
+1.3.0
+-----
+
+* Graceful shutdown added to ServiceLauncher
+* Updated from global requirements
+* Fix some inconsistency in docstrings
+* Refactoring of tests/eventlet_service.py
+* Updated from global requirements
+* Remove argument ServiceLauncher.wait() method
+* fix a couple of assert issues
+* Run sslutils and wsgi tests for python3
+* Updated from global requirements
+
 1.2.0
 -----
 
