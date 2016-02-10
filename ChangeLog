@@ -1,10 +1,25 @@
 CHANGES
 =======
 
+1.4.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Update translation setup
+* Fix race condition on handling signals
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix artificial service.wait()
+
 1.3.0
 -----
 
 * Graceful shutdown added to ServiceLauncher
+* Fix test execution on CentOS 7
 * Updated from global requirements
 * Fix some inconsistency in docstrings
 * Refactoring of tests/eventlet_service.py
