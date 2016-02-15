@@ -4,7 +4,7 @@
 #
 Name     : oslo.service
 Version  : 1.4.0
-Release  : 12
+Release  : 13
 URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.4.0.tar.gz
 Summary  : oslo.service library
