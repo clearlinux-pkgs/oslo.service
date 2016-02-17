@@ -1,11 +1,18 @@
 CHANGES
 =======
 
+1.5.0
+-----
+
+* Use requests in TestWSGIServerWithSSL instead of raw socket client
+
 1.4.0
 -----
 
 * Updated from global requirements
 * Updated from global requirements
+* Fix misspelling and rewrite sentence
+* Add a more useful/detailed frame dumping function
 * Updated from global requirements
 * Update translation setup
 * Fix race condition on handling signals
