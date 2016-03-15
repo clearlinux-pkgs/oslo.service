@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+1.7.0
+-----
+
+* Updated from global requirements
+* Correct some help text
+* Fix typo in help text
+* wsgi: decrease the default number of greenthreads in pool
+* Updated from global requirements
+
+1.6.0
+-----
+
+* Updated from global requirements
+* Allow the backdoor to serve from a local unix domain socket
+* Updated from global requirements
+
 1.5.0
 -----
 
