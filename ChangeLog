@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.8.0
+-----
+
+* Updated from global requirements
+* Update .gitreview for stable/mitaka
+
 1.7.0
 -----
 
