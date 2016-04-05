@@ -3,9 +3,12 @@ coverage-python
 doc8-python
 docutils-python
 eventlet-python
+extras
+extras-python
 GitPython-python
 greenlet-python
 hacking
+Jinja2
 msgpack-python-python
 oslo.concurrency-python
 oslo.i18n-python
@@ -19,6 +22,7 @@ pip
 pluggy
 pyinotify-python
 py-python
+pyrsistent-python
 pytest
 python3-dev
 python-dev

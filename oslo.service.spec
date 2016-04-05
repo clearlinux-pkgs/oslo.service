@@ -4,7 +4,7 @@
 #
 Name     : oslo.service
 Version  : 1.8.0
-Release  : 16
+Release  : 17
 URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.8.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.8.0.tar.gz
 Summary  : oslo.service library
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: oslo.service-python
 BuildRequires : GitPython-python
+BuildRequires : Jinja2
 BuildRequires : Paste-python
 BuildRequires : PasteDeploy-python
 BuildRequires : Sphinx-python
@@ -21,6 +22,8 @@ BuildRequires : coverage-python
 BuildRequires : doc8-python
 BuildRequires : docutils-python
 BuildRequires : eventlet-python
+BuildRequires : extras
+BuildRequires : extras-python
 BuildRequires : greenlet-python
 BuildRequires : hacking
 BuildRequires : msgpack-python-python
@@ -34,6 +37,7 @@ BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pyinotify-python
+BuildRequires : pyrsistent-python
 BuildRequires : pytest
 BuildRequires : python-dev
 BuildRequires : python-mock-python
