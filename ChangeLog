@@ -1,11 +1,44 @@
 CHANGES
 =======
 
-1.8.0
+1.12.0
+------
+
+* Imported Translations from Zanata
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.11.0
+------
+
+* Trivial: ignore openstack/common in flake8 exclude list
+
+1.10.0
+------
+
+* [Trivial] Remove executable privilege of doc/source/conf.py
+
+1.9.0
 -----
 
 * Updated from global requirements
-* Update .gitreview for stable/mitaka
+* Offer mutate_config_files
+* Make _spawn_service more flexible
+* Remove direct dependency on babel
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix argument type for _sd_notify() on python3
+* Use a timeutils.StopWatch for cancel timing
+* Add ability to cancel Threads and ThreadGroups
+* Exception: message need '_' function
+* Fix Heartbeats stop when time is changed
+* Updated from global requirements
 
 1.7.0
 -----
