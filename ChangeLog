@@ -1,10 +1,21 @@
 CHANGES
 =======
 
+1.17.0
+------
+
+* Changed the home-page link
+* Updated from global requirements
+* Replace 'MagicMock' with 'Mock'
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
 1.16.0
 ------
 
 * Updated from global requirements
+* Stay alive on double SIGHUP
 
 1.15.0
 ------
@@ -23,6 +34,7 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
+* Add reno for release notes management
 * Updated from global requirements
 
 1.12.0
