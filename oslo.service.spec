@@ -6,7 +6,7 @@
 #
 Name     : oslo.service
 Version  : 1.17.0
-Release  : 29
+Release  : 30
 URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.17.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.17.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.17.0.tar.gz.asc
@@ -27,48 +27,11 @@ Requires: oslo.i18n
 Requires: oslo.log
 Requires: oslo.utils
 Requires: six
-BuildRequires : GitPython-python
-BuildRequires : Jinja2
-BuildRequires : Paste-python
-BuildRequires : PasteDeploy-python
-BuildRequires : Routes-python
-BuildRequires : Sphinx-python
-BuildRequires : WebOb-python
-BuildRequires : bandit-python
-BuildRequires : configparser-python
-BuildRequires : coverage-python
-BuildRequires : doc8-python
-BuildRequires : docutils-python
-BuildRequires : enum34-python
-BuildRequires : eventlet-python
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : greenlet-python
-BuildRequires : hacking
-BuildRequires : imagesize-python
-BuildRequires : monotonic-python
-BuildRequires : msgpack-python-python
-BuildRequires : oslo.concurrency-python
-BuildRequires : oslo.config
-BuildRequires : oslo.i18n-python
-BuildRequires : oslo.log-python
-BuildRequires : oslo_utils-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pyinotify-python
-BuildRequires : pyrsistent-python
-BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-mock-python
 BuildRequires : python3-dev
-BuildRequires : restructuredtext_lint-python
 BuildRequires : setuptools
-BuildRequires : tox
-BuildRequires : virtualenv
 
 %description
 ========================================================
@@ -88,17 +51,12 @@ python components for the oslo.service package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489034555
+export SOURCE_DATE_EPOCH=1489273336
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1489034555
+export SOURCE_DATE_EPOCH=1489273336
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
