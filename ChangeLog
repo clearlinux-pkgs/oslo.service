@@ -1,12 +1,43 @@
 CHANGES
 =======
 
+1.20.0
+------
+
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Updated from global requirements
+* Updated from global requirements
+* Fix race condition with fast threads
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
+* Remove duplicated register_opts call
+* Update reno for stable/ocata
+* Remove references to Python 3.4
+
+1.19.0
+------
+
+* Add FixedIntervalWithTimeoutLoopingCall
+* Add Constraints support
+* Show team and repo badges on README
+
+1.18.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Update .coveragerc after the removal of respective directory
+* Delete python bytecode file
+
 1.17.0
 ------
 
 * Changed the home-page link
 * Updated from global requirements
 * Replace 'MagicMock' with 'Mock'
+* Enable release notes translation
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
