@@ -1,10 +1,18 @@
 CHANGES
 =======
 
+1.22.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+
 1.21.0
 ------
 
 * Remove log translations
+* Use Sphinx 1.5 warning-is-error
+* Fix some reST field lists in docstrings
 * Updated from global requirements
 
 1.20.0
