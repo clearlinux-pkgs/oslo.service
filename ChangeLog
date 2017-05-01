@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+1.23.0
+------
+
+* Add min\_interval to BackOffLoopingCall
+
 1.22.0
 ------
 
@@ -23,8 +28,8 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Fix race condition with fast threads
-* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
-* Remove duplicated register_opts call
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo\_xyz)
+* Remove duplicated register\_opts call
 * Update reno for stable/ocata
 * Remove references to Python 3.4
 
@@ -107,17 +112,17 @@ CHANGES
 -----
 
 * Updated from global requirements
-* Offer mutate_config_files
-* Make _spawn_service more flexible
+* Offer mutate\_config\_files
+* Make \_spawn\_service more flexible
 * Remove direct dependency on babel
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
-* Fix argument type for _sd_notify() on python3
+* Fix argument type for \_sd\_notify() on python3
 * Use a timeutils.StopWatch for cancel timing
 * Add ability to cancel Threads and ThreadGroups
-* Exception: message need '_' function
+* Exception: message need '\_' function
 * Fix Heartbeats stop when time is changed
 * Updated from global requirements
 
@@ -165,7 +170,7 @@ CHANGES
 * Fix test execution on CentOS 7
 * Updated from global requirements
 * Fix some inconsistency in docstrings
-* Refactoring of tests/eventlet_service.py
+* Refactoring of tests/eventlet\_service.py
 * Updated from global requirements
 * Remove argument ServiceLauncher.wait() method
 * fix a couple of assert issues
@@ -185,9 +190,9 @@ CHANGES
 -----
 
 * Avoid warning when time taken is close to zero
-* Update the _i18n.py file and fix the domain value
+* Update the \_i18n.py file and fix the domain value
 * Add Bandit to tox for security static analysis
-* Code refactoring of ThreadGroup::stop_timers()
+* Code refactoring of ThreadGroup::stop\_timers()
 
 1.0.0
 -----
@@ -195,7 +200,7 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Add functionality for creating Unix domain WSGI servers
-* Use reflection.get_class_name() from oslo.utils
+* Use reflection.get\_class\_name() from oslo.utils
 * Remove Python 2.6 classifier
 * Remove openstack-common.conf
 * cleanup tox.ini
@@ -205,7 +210,7 @@ CHANGES
 0.13.0
 ------
 
-* Default value of graceful_shutdown_timeout is set to 60sec
+* Default value of graceful\_shutdown\_timeout is set to 60sec
 * Updated from global requirements
 * Logger name argument was added into wsgi.Server constructor
 * Avoid the dual-naming confusion
@@ -214,11 +219,11 @@ CHANGES
 0.12.0
 ------
 
-* Document graceful_shutdown_timeout config option
+* Document graceful\_shutdown\_timeout config option
 * Remove py26 env from test list
-* Added config option graceful_shutdown_timeout
+* Added config option graceful\_shutdown\_timeout
 * Updated from global requirements
-* Add docstring for LoopingCallBase._start()
+* Add docstring for LoopingCallBase.\_start()
 * Updated from global requirements
 
 0.11.0
@@ -236,7 +241,7 @@ CHANGES
 * RetryDecorator should not log warnings/errors for expected exceptions
 * Termination children on SIGHUP added
 * Fix coverage configuration and execution
-* Add register_opts function to sslutils
+* Add register\_opts function to sslutils
 * Move the common thread manipulating routine to a shared routine
 * Update log string to correctly denote what it waits on
 * Avoid removing entries for timers that didn't stop
@@ -247,12 +252,12 @@ CHANGES
 * Add shields.io version/downloads links/badges into README.rst
 * add auto-generated docs for config options
 * Move backoff looping call from IPA to oslo.service
-* Change ignore-errors to ignore_errors
+* Change ignore-errors to ignore\_errors
 * Fix the home-page value in setup.cfg
 * WSGI module was corrected
 * Updated from global requirements
 * ThreadGroup's stop didn't recognise the current thread correctly
-* doing monkey_patch for unittest
+* doing monkey\_patch for unittest
 
 0.9.0
 -----
@@ -271,9 +276,9 @@ CHANGES
 
 * Updated from global requirements
 * Update "Signal handling" section of usage docs
-* Use oslo_utils reflection to get 'f' callable name
+* Use oslo\_utils reflection to get 'f' callable name
 * Updated from global requirements
-* Prefix the 'safe_wrapper' function to be '_safe_wrapper'
+* Prefix the 'safe\_wrapper' function to be '\_safe\_wrapper'
 * Setup translations
 * Check that sighup is supported before accessing signal.SIGHUP
 * Use contextlib.closing instead of try ... finally: sock.close
@@ -286,7 +291,7 @@ CHANGES
 * Added newline at end of file
 * Added class SignalHandler
 * Updated from global requirements
-* Activate pep8 check that _ is imported
+* Activate pep8 check that \_ is imported
 * Denote what happens when no exceptions are passed in
 * Allow LoopingCall to continue on exception in callee
 
@@ -296,17 +301,17 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
-* Add oslo_debug_helper to tox.ini
-* Add usage documentation for oslo_service.service module
+* Add oslo\_debug\_helper to tox.ini
+* Add usage documentation for oslo\_service.service module
 
 0.4.0
 -----
 
 * Updated from global requirements
 * save docstring, name etc using six.wraps
-* Move backdoor-related tests from test_service
-* Add mock to test_requirements
-* Remove usage of mox in test_eventlet_backdoor
+* Move backdoor-related tests from test\_service
+* Add mock to test\_requirements
+* Remove usage of mox in test\_eventlet\_backdoor
 
 0.3.0
 -----
@@ -328,7 +333,7 @@ CHANGES
 * Return timer after adding it to internal list
 * Updated from global requirements
 * Have all the looping calls share a common run loop
-* Move service abstract base class check to launch_service methods
+* Move service abstract base class check to launch\_service methods
 * Fix a typo in a comment
 * Updated from global requirements
 * Use a signal name->sigval and sigval->signal name mapping
@@ -361,18 +366,18 @@ CHANGES
 * Revert "Revert "Optimization of waiting subprocesses in ProcessLauncher""
 * Revert "Optimization of waiting subprocesses in ProcessLauncher"
 * ProcessLauncher: reload config file in parent process on SIGHUP
-* Add check to test__signal_handlers_set
+* Add check to test\_\_signal\_handlers\_set
 * Store ProcessLauncher signal handlers on class level
-* Remove unused validate_ssl_version
+* Remove unused validate\_ssl\_version
 * Update tests for optional sslv3
-* Fixed ssl.PROTOCOL_SSLv3 not supported by Python 2.7.9
+* Fixed ssl.PROTOCOL\_SSLv3 not supported by Python 2.7.9
 * Optimization of waiting subprocesses in ProcessLauncher
-* Switch from oslo.config to oslo_config
-* Change oslo.config to oslo_config
+* Switch from oslo.config to oslo\_config
+* Change oslo.config to oslo\_config
 * Remove oslo.log code and clean up versionutils API
 * Replace mox by mox3
 * Allow overriding name for periodic tasks
-* Separate add_periodic_task from the metaclass __init__
+* Separate add\_periodic\_task from the metaclass \_\_init\_\_
 * Upgrade to hacking 0.10
 * Remove unnecessary import of eventlet
 * Added graceful argument on Service.stop method
@@ -380,13 +385,13 @@ CHANGES
 * Prefer delayed %r formatting over explicit repr use
 * ServiceRestartTest: make it more resilient
 * threadgroup: don't log GreenletExit
-* add list_opts to all modules with configuration options
+* add list\_opts to all modules with configuration options
 * Remove code that moved to oslo.i18n
 * Remove graduated test and fixtures libraries
 * rpc, notifier: remove deprecated modules
 * Let oslotest manage the six.move setting for mox
 * Remove usage of readlines()
-* Allow test_service to run in isolation
+* Allow test\_service to run in isolation
 * Changes calcuation of variable delay
 * Use timestamp in loopingcall
 * Remove unnecessary setUp function
@@ -395,11 +400,11 @@ CHANGES
 * Make periodic tasks run on regular spacing interval
 * Use moxstubout and mockpatch from oslotest
 * Implement stop method in ProcessLauncher
-* Fix parenthesis typo misunderstanding in periodic_task
+* Fix parenthesis typo misunderstanding in periodic\_task
 * Fix docstring indentation in systemd
 * Remove redundant default=None for config options
 * Make unspecified periodic spaced tasks run on default interval
-* Make stop_timers() method public
+* Make stop\_timers() method public
 * Remove deprecated LoopingCall
 * Fixed several typos
 * Add graceful stop function to ThreadGroup.stop
@@ -407,36 +412,36 @@ CHANGES
 * Remove duplicated "caught" message
 * Move notification point to a better place
 * Remove rendundant parentheses of cfg help strings
-* Adds test condition in test_periodic
+* Adds test condition in test\_periodic
 * Fixed spelling error - occured to occurred
-* Add missing _LI for LOG.info in service module
+* Add missing \_LI for LOG.info in service module
 * notify calling process we are ready to serve
 * Reap child processes gracefully if greenlet thread gets killed
 * Improve help strings for sslutils module
 * Remove unnecessary usage of noqa
-* Removes use of timeutils.set_time_override
+* Removes use of timeutils.set\_time\_override
 * Update oslo log messages with translation domains
-* Refactor unnecessary arithmetic ops in periodic_task
-* Refactor if logic in periodic_task
+* Refactor unnecessary arithmetic ops in periodic\_task
+* Refactor if logic in periodic\_task
 * Use timestamp in periodic tasks
 * Add basic Python 3 tests
-* Clear time override in test_periodic
-* Don't share periodic_task instance data in a class attr
+* Clear time override in test\_periodic
+* Don't share periodic\_task instance data in a class attr
 * Revert "service: replace eventlet event by threading"
 * Simplify launch method
 * Simple typo correction
 * Cleanup unused log related code
 * Utilizes assertIsNone and assertIsNotNone
 * Fix filter() usage due to python 3 compability
-* Use hacking import_exceptions for gettextutils._
+* Use hacking import\_exceptions for gettextutils.\_
 * threadgroup: use threading rather than greenthread
 * disable SIGHUP restart behavior in foreground
 * service: replace eventlet event by threading
 * Allow configurable ProcessLauncher liveness check
 * Make wait & stop methods work on all threads
-* Typos fix in db and periodic_task module
+* Typos fix in db and periodic\_task module
 * Remove vim header
-* os._exit in _start_child may cause unexpected exception
+* os.\_exit in \_start\_child may cause unexpected exception
 * Adjust import order according to PEP8 imports rule
 * Add a link method to Thread
 * Use multiprocessing.Event to ensure services have started
@@ -455,15 +460,15 @@ CHANGES
 * Allow launchers to be stopped multiple times
 * Ignore any exceptions from rpc.cleanup()
 * Add graceful service shutdown support to Launcher
-* Improve usability when backdoor_port is nonzero
+* Improve usability when backdoor\_port is nonzero
 * Enable hacking H404 test
 * Enable hacking H402 test
 * Enable hacking H401 test
 * Fixes import order nits
 * Add DynamicLoopCall timers to ThreadGroups
-* Pass backdoor_port to services being launched
+* Pass backdoor\_port to services being launched
 * Improve python3 compatibility
-* Use print_function __future__ import
+* Use print\_function \_\_future\_\_ import
 * Improve Python 3.x compatibility
 * Import nova's looping call
 * Copy recent changes in periodic tasks from nova
@@ -476,25 +481,25 @@ CHANGES
 * Replace direct use of testtools BaseTestCase
 * Use testtools as test base class
 * ThreadGroup remove unused name parameters
-* Implement importutils.try_import
-* Fix test cases in tests.unit.test_service
+* Implement importutils.try\_import
+* Fix test cases in tests.unit.test\_service
 * Don't rely on os.wait() blocking
 * Use Service thread group for WSGI request handling
 * Make project pyflakes clean
-* Replace try: import with extras.try_import
-* raise_on_error parameter shouldn't be passed to task function
+* Replace try: import with extras.try\_import
+* raise\_on\_error parameter shouldn't be passed to task function
 * Account for tasks duration in LoopingCall delay
 * updating sphinx documentation
-* Enable eventlet_backdoor to return port
+* Enable eventlet\_backdoor to return port
 * Use the ThreadGroup for the Launcher
 * Change RPC cleanup ordering
 * threadgroup : greethread.cancel() should be kill()
-* Use spawn_n when not capturing return value
+* Use spawn\_n when not capturing return value
 * Make ThreadGroup derived from object to make mocking possible
-* Don't log exceptions for GreenletExit and thread_done
+* Don't log exceptions for GreenletExit and thread\_done
 * Log CONF from ProcessLauncher.wait, like ServiceLauncher
 * Import order clean-up
-* Added a missing `cfg` import in service.py
+* Added a missing \`cfg\` import in service.py
 * Log config on startup
 * Integrate eventlet backdoor
 * Add the rpc service and delete manager
@@ -505,7 +510,7 @@ CHANGES
 * Add signal handling to service launcher
 * Basic service launching infrastructure
 * Move manager.py and service.py into common
-* Copy eventlet_backdoor into common from nova
+* Copy eventlet\_backdoor into common from nova
 * Copy LoopingCall from nova for service.py
 * initial commit
 * Initial skeleton project
