@@ -1,6 +1,108 @@
 CHANGES
 =======
 
+1.31.2
+------
+
+* [ThreadGroup] Don't remove timer when stop timers
+* tox.ini: Use python3.5 in py35 environment
+* Python 3: Fix eventlet wakeup after signal
+* Python 3: Fix non-deterministic test
+* Remove stale pip-missing-reqs tox test
+* Trivial: Update pypi url to new url
+* add lower-constraints job
+* move doc8 test to pep8 job
+* set default python to python3
+
+1.31.1
+------
+
+* Revert "Revert "Permit aborting loopingcall while sleeping""
+
+1.31.0
+------
+
+* Remove eventlet cap
+* Fixup certificates and skip failing test
+
+1.30.0
+------
+
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+* Update links in README
+* Imported Translations from Zanata
+* Updated from global requirements
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.29.0
+------
+
+* Maintain shared memory after fork in Python >=3.7
+* Updated from global requirements
+* Revert "Permit aborting loopingcall while sleeping"
+
+1.28.1
+------
+
+
+1.28.0
+------
+
+* Remove -U from pip install
+* Avoid tox\_install.sh for constraints support
+* Updated from global requirements
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+
+1.27.0
+------
+
+* Updated from global requirements
+* change periodic\_task to catch all exceptions including BaseException
+* Fix bandit scan and make it voting
+* Imported Translations from Zanata
+
+1.26.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Updated from global requirements
+* Updated from global requirements
+* Update reno for stable/pike
+* Updated from global requirements
+
+1.25.0
+------
+
+* Update URLs in documents according to document migration
+
+1.24.1
+------
+
+* rearrange existing documentation to fit the new standard layout
+* switch from oslosphinx to openstackdocstheme
+
+1.24.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Permit aborting loopingcall while sleeping
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
 1.23.0
 ------
 
