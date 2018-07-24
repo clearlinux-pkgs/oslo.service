@@ -1,10 +1,22 @@
 CHANGES
 =======
 
+1.31.3
+------
+
+* Remove unnecessary pyNN testenv
+* Convert oslo.service to using stestr
+* Add release notes link to README
+* Fix oslo.service ProcessLauncher fails to call stop
+* fix tox python3 overrides
+* Add test dependency on requests
+* Remove moxstubout
+
 1.31.2
 ------
 
 * [ThreadGroup] Don't remove timer when stop timers
+* Make lower-constraints job voting
 * tox.ini: Use python3.5 in py35 environment
 * Python 3: Fix eventlet wakeup after signal
 * Python 3: Fix non-deterministic test
