@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+1.32.0
+------
+
+* Ensure connection is active in graceful shutdown tests
+* Stop asserting on Eventlet internals
+* Skips signal handling on Windows
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+
 1.31.3
 ------
 
