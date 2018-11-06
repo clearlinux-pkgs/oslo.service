@@ -1,5 +1,5 @@
 PKG_NAME := oslo.service
-URL = http://tarballs.openstack.org/oslo.service/oslo.service-1.32.0.tar.gz
+URL = http://tarballs.openstack.org/oslo.service/oslo.service-1.32.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

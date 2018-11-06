@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+1.32.1
+------
+
+* Fix stop of loopingcall
+* Use eventlet Event for loopingcall events
+* Clean up .gitignore references to personal tools
+* Always build universal wheels
+
 1.32.0
 ------
 

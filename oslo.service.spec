@@ -5,17 +5,17 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.service
-Version  : 1.32.0
-Release  : 39
-URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.32.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.32.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.32.0.tar.gz.asc
+Version  : 1.32.1
+Release  : 40
+URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.32.1.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.32.1.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.32.1.tar.gz.asc
 Summary  : oslo.service library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: oslo.service-python3
-Requires: oslo.service-license
-Requires: oslo.service-python
+Requires: oslo.service-license = %{version}-%{release}
+Requires: oslo.service-python = %{version}-%{release}
+Requires: oslo.service-python3 = %{version}-%{release}
 Requires: Paste
 Requires: PasteDeploy
 Requires: Routes
@@ -47,7 +47,7 @@ license components for the oslo.service package.
 %package python
 Summary: python components for the oslo.service package.
 Group: Default
-Requires: oslo.service-python3
+Requires: oslo.service-python3 = %{version}-%{release}
 
 %description python
 python components for the oslo.service package.
@@ -63,21 +63,21 @@ python3 components for the oslo.service package.
 
 
 %prep
-%setup -q -n oslo.service-1.32.0
+%setup -q -n oslo.service-1.32.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536417867
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541529379
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/oslo.service
-cp LICENSE %{buildroot}/usr/share/doc/oslo.service/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/oslo.service
+cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -86,8 +86,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/oslo.service/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/oslo.service/LICENSE
 
 %files python
 %defattr(-,root,root,-)
