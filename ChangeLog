@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.33.0
+------
+
+* Fixture to mock loopingcall wait()
+* Limit monotonic to py2
+
 1.32.1
 ------
 
