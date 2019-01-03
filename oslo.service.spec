@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.service
-Version  : 1.33.0
-Release  : 42
-URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.33.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.33.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.33.0.tar.gz.asc
+Version  : 1.34.0
+Release  : 43
+URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.34.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.34.0.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.34.0.tar.gz.asc
 Summary  : oslo.service library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -20,6 +20,7 @@ Requires: Paste
 Requires: PasteDeploy
 Requires: Routes
 Requires: WebOb
+Requires: debtcollector
 Requires: eventlet
 Requires: fixtures
 Requires: greenlet
@@ -34,8 +35,11 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+.. image:: https://governance.openstack.org/tc/badges/oslo.service.svg
+:target: https://governance.openstack.org/tc/ference/tags/index.html
 
 %package license
 Summary: license components for the oslo.service package.
@@ -64,14 +68,15 @@ python3 components for the oslo.service package.
 
 
 %prep
-%setup -q -n oslo.service-1.33.0
+%setup -q -n oslo.service-1.34.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541635965
+export SOURCE_DATE_EPOCH=1546552476
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install

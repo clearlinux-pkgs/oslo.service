@@ -1,6 +1,19 @@
 CHANGES
 =======
 
+1.34.0
+------
+
+* Use template for lower-constraints
+* Deprecate the ThreadGroup.cancel() API
+* Document the threadgroup module
+* Actually test child SIGHUP signal
+* Restore correct signal handling in Python3
+* Add stop\_on\_exception to TG timers
+* Add better timer APIs to ThreadGroup
+* Update mailinglist from dev to discuss
+* Use SleepFixture in looping call test suite
+
 1.33.0
 ------
 
