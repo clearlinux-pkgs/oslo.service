@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.36.0
+------
+
+* Use eventletutils Event class
+* Avoid eventlet\_backdoor listing on same port
+
 1.35.0
 ------
 
