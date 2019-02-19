@@ -6,7 +6,7 @@
 #
 Name     : oslo.service
 Version  : 1.37.0
-Release  : 46
+Release  : 47
 URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.37.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.37.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.37.0.tar.gz.asc
@@ -31,6 +31,7 @@ Requires: oslo.i18n
 Requires: oslo.log
 Requires: oslo.utils
 Requires: six
+Requires: yappi
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
@@ -75,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550538647
+export SOURCE_DATE_EPOCH=1550540403
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
