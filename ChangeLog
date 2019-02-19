@@ -1,9 +1,14 @@
 CHANGES
 =======
 
+1.37.0
+------
+
+
 1.36.0
 ------
 
+* Profile Oslo Service processes
 * Use eventletutils Event class
 * Avoid eventlet\_backdoor listing on same port
 
