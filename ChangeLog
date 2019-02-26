@@ -1,9 +1,17 @@
 CHANGES
 =======
 
+1.38.0
+------
+
+* Update oslo.service to require yappi 1.0 or newer
+* add python 3.7 unit test job
+* Update hacking version
+
 1.37.0
 ------
 
+* Bump oslo.utils lower constraint to 3.40.2
 
 1.36.0
 ------
