@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.service
-Version  : 1.38.0
-Release  : 49
-URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.38.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.38.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.38.0.tar.gz.asc
+Version  : 1.39.0
+Release  : 50
+URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.39.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.39.0.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.service/oslo.service-1.39.0.tar.gz.asc
 Summary  : oslo.service library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -32,8 +32,24 @@ Requires: oslo.log
 Requires: oslo.utils
 Requires: six
 Requires: yappi
+BuildRequires : Paste
+BuildRequires : PasteDeploy
+BuildRequires : Routes
+BuildRequires : WebOb
 BuildRequires : buildreq-distutils3
+BuildRequires : debtcollector
+BuildRequires : eventlet
+BuildRequires : fixtures
+BuildRequires : greenlet
+BuildRequires : monotonic
+BuildRequires : oslo.concurrency
+BuildRequires : oslo.config
+BuildRequires : oslo.i18n
+BuildRequires : oslo.log
+BuildRequires : oslo.utils
 BuildRequires : pbr
+BuildRequires : six
+BuildRequires : yappi
 
 %description
 ========================
@@ -69,18 +85,26 @@ python3 components for the oslo.service package.
 
 
 %prep
-%setup -q -n oslo.service-1.38.0
+%setup -q -n oslo.service-1.39.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551157348
+export SOURCE_DATE_EPOCH=1558475674
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.service
 cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/LICENSE
