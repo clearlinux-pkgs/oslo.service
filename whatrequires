@@ -5,4 +5,7 @@ ironic
 ironic-lib
 neutron
 neutron-lib
+nova
+os-brick
 oslo.messaging
+sahara
