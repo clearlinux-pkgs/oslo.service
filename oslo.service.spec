@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xFC43F0EE211DFED8 (infra-root@openstack.org)
 #
 Name     : oslo.service
-Version  : 1.40.1
-Release  : 53
-URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.40.1.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.40.1.tar.gz
-Source1 : http://tarballs.openstack.org/oslo.service/oslo.service-1.40.1.tar.gz.asc
+Version  : 1.40.2
+Release  : 54
+URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.40.2.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.40.2.tar.gz
+Source1 : http://tarballs.openstack.org/oslo.service/oslo.service-1.40.2.tar.gz.asc
 Summary  : oslo.service library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -85,14 +85,14 @@ python3 components for the oslo.service package.
 
 
 %prep
-%setup -q -n oslo.service-1.40.1
+%setup -q -n oslo.service-1.40.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567660428
+export SOURCE_DATE_EPOCH=1568320555
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar

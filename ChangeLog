@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+1.40.2
+------
+
+* Reno for SIGHUP fix
+
 1.40.1
 ------
 
