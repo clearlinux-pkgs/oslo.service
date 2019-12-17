@@ -1,6 +1,20 @@
 CHANGES
 =======
 
+1.41.1
+------
+
+* Add 'is\_available' function
+* tox: Keeping going with docs
+* Switch to official Ussuri jobs
+* Extend test cert validity to 2049
+* Update the constraints url
+
+1.41.0
+------
+
+* Update master for stable/train
+
 1.40.2
 ------
 
