@@ -6,7 +6,7 @@
 #
 Name     : oslo.service
 Version  : 1.41.1
-Release  : 57
+Release  : 58
 URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.41.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.41.1.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-1.41.1.tar.gz.asc
