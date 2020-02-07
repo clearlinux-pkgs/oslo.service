@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : oslo.service
-Version  : 1.41.1
-Release  : 58
-URL      : http://tarballs.openstack.org/oslo.service/oslo.service-1.41.1.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-1.41.1.tar.gz
-Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-1.41.1.tar.gz.asc
+Version  : 2.0.0
+Release  : 59
+URL      : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz
+Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz.asc
 Summary  : oslo.service library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -24,7 +24,6 @@ Requires: debtcollector
 Requires: eventlet
 Requires: fixtures
 Requires: greenlet
-Requires: monotonic
 Requires: oslo.concurrency
 Requires: oslo.config
 Requires: oslo.i18n
@@ -41,7 +40,6 @@ BuildRequires : debtcollector
 BuildRequires : eventlet
 BuildRequires : fixtures
 BuildRequires : greenlet
-BuildRequires : monotonic
 BuildRequires : oslo.concurrency
 BuildRequires : oslo.config
 BuildRequires : oslo.i18n
@@ -85,15 +83,15 @@ python3 components for the oslo.service package.
 
 
 %prep
-%setup -q -n oslo.service-1.41.1
-cd %{_builddir}/oslo.service-1.41.1
+%setup -q -n oslo.service-2.0.0
+cd %{_builddir}/oslo.service-2.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576569825
+export SOURCE_DATE_EPOCH=1581038916
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -110,7 +108,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.service
-cp %{_builddir}/oslo.service-1.41.1/LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/294b43b2cec9919063be1a3b49e8722648424779
+cp %{_builddir}/oslo.service-2.0.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
