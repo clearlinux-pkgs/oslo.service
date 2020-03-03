@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 barbican
 cinder
+heat
 ironic
 ironic-lib
 neutron

@@ -6,7 +6,7 @@
 #
 Name     : oslo.service
 Version  : 2.0.0
-Release  : 59
+Release  : 60
 URL      : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz.asc
@@ -53,8 +53,35 @@ BuildRequires : yappi
 ========================
 Team and repository tags
 ========================
+
 .. image:: https://governance.openstack.org/tc/badges/oslo.service.svg
-:target: https://governance.openstack.org/tc/ference/tags/index.html
+    :target: https://governance.openstack.org/tc/ference/tags/index.html
+
+.. Change things from this point on
+
+========================================================
+ oslo.service -- Library for running OpenStack services
+========================================================
+
+.. image:: https://img.shields.io/pypi/v/oslo.service.svg
+    :target: https://pypi.org/project/oslo.service/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/oslo.service.svg
+    :target: https://pypi.org/project/oslo.service/
+    :alt: Downloads
+
+oslo.service provides a framework for defining new long-running
+services using the patterns established by other OpenStack
+applications. It also includes utilities long-running applications
+might need for working with SSL or WSGI, performing periodic
+operations, interacting with systemd, etc.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/oslo.service/latest/
+* Source: https://opendev.org/openstack/oslo.service
+* Bugs: https://bugs.launchpad.net/oslo.service
+* Release notes: https://docs.openstack.org/releasenotes/oslo.service/
 
 %package license
 Summary: license components for the oslo.service package.
@@ -77,6 +104,7 @@ python components for the oslo.service package.
 Summary: python3 components for the oslo.service package.
 Group: Default
 Requires: python3-core
+Provides: pypi(oslo.service)
 
 %description python3
 python3 components for the oslo.service package.
@@ -91,7 +119,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581038916
+export SOURCE_DATE_EPOCH=1583194868
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
