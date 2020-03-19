@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+2.1.0
+-----
+
+* Update eventlet
+* Update the minversion parameter
+* remove outdated header
+* reword releasenote for py27 support dropping
+
 2.0.0
 -----
 

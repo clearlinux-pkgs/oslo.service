@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : oslo.service
-Version  : 2.0.0
-Release  : 60
-URL      : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz
-Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-2.0.0.tar.gz.asc
+Version  : 2.1.0
+Release  : 61
+URL      : http://tarballs.openstack.org/oslo.service/oslo.service-2.1.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-2.1.0.tar.gz
+Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-2.1.0.tar.gz.asc
 Summary  : oslo.service library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -53,35 +53,8 @@ BuildRequires : yappi
 ========================
 Team and repository tags
 ========================
-
 .. image:: https://governance.openstack.org/tc/badges/oslo.service.svg
-    :target: https://governance.openstack.org/tc/ference/tags/index.html
-
-.. Change things from this point on
-
-========================================================
- oslo.service -- Library for running OpenStack services
-========================================================
-
-.. image:: https://img.shields.io/pypi/v/oslo.service.svg
-    :target: https://pypi.org/project/oslo.service/
-    :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/dm/oslo.service.svg
-    :target: https://pypi.org/project/oslo.service/
-    :alt: Downloads
-
-oslo.service provides a framework for defining new long-running
-services using the patterns established by other OpenStack
-applications. It also includes utilities long-running applications
-might need for working with SSL or WSGI, performing periodic
-operations, interacting with systemd, etc.
-
-* Free software: Apache license
-* Documentation: https://docs.openstack.org/oslo.service/latest/
-* Source: https://opendev.org/openstack/oslo.service
-* Bugs: https://bugs.launchpad.net/oslo.service
-* Release notes: https://docs.openstack.org/releasenotes/oslo.service/
+:target: https://governance.openstack.org/tc/ference/tags/index.html
 
 %package license
 Summary: license components for the oslo.service package.
@@ -105,21 +78,36 @@ Summary: python3 components for the oslo.service package.
 Group: Default
 Requires: python3-core
 Provides: pypi(oslo.service)
+Requires: pypi(debtcollector)
+Requires: pypi(eventlet)
+Requires: pypi(fixtures)
+Requires: pypi(greenlet)
+Requires: pypi(oslo.concurrency)
+Requires: pypi(oslo.config)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.log)
+Requires: pypi(oslo.utils)
+Requires: pypi(paste)
+Requires: pypi(pastedeploy)
+Requires: pypi(routes)
+Requires: pypi(six)
+Requires: pypi(webob)
+Requires: pypi(yappi)
 
 %description python3
 python3 components for the oslo.service package.
 
 
 %prep
-%setup -q -n oslo.service-2.0.0
-cd %{_builddir}/oslo.service-2.0.0
+%setup -q -n oslo.service-2.1.0
+cd %{_builddir}/oslo.service-2.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583194868
+export SOURCE_DATE_EPOCH=1584633795
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -136,7 +124,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.service
-cp %{_builddir}/oslo.service-2.0.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/294b43b2cec9919063be1a3b49e8722648424779
+cp %{_builddir}/oslo.service-2.1.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
