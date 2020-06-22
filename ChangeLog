@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+2.3.0
+-----
+
+* Fix wsgi/SSL/ipv6 tests for wsgi module under python 3
+* Fix some SSL tests for wsgi module under python 3
+* Raise minimum version of eventlet to 0.25.2
+* Fix pygments style
+* Stop to use the \_\_future\_\_ module
+
 2.2.0
 -----
 
