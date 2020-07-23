@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+2.3.2
+-----
+
+* Do not import "oslo.log" in the main module
+
 2.3.1
 -----
 
