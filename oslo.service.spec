@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC12B8E73B30F2FC8 (infra-root@openstack.org)
 #
 Name     : oslo.service
-Version  : 2.3.2
-Release  : 66
-URL      : http://tarballs.openstack.org/oslo.service/oslo.service-2.3.2.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-2.3.2.tar.gz
-Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-2.3.2.tar.gz.asc
+Version  : 2.4.0
+Release  : 67
+URL      : http://tarballs.openstack.org/oslo.service/oslo.service-2.4.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.service/oslo.service-2.4.0.tar.gz
+Source1  : http://tarballs.openstack.org/oslo.service/oslo.service-2.4.0.tar.gz.asc
 Summary  : oslo.service library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -93,15 +93,15 @@ python3 components for the oslo.service package.
 
 
 %prep
-%setup -q -n oslo.service-2.3.2
-cd %{_builddir}/oslo.service-2.3.2
+%setup -q -n oslo.service-2.4.0
+cd %{_builddir}/oslo.service-2.4.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1595516135
+export SOURCE_DATE_EPOCH=1600109829
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -117,7 +117,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.service
-cp %{_builddir}/oslo.service-2.3.2/LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/294b43b2cec9919063be1a3b49e8722648424779
+cp %{_builddir}/oslo.service-2.4.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.service/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

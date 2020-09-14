@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.4.0
+-----
+
+* [goal] Migrate testing to ubuntu focal
+* Bump bandit version
+
 2.3.2
 -----
 
@@ -31,6 +37,7 @@ CHANGES
 * Remove translation sections from setup.cfg
 * Align tests with monkey patch original current\_thread \_active
 * Remove monotonic usage
+* Align contributing doc with oslo's policy
 * Monkey patch original current\_thread \_active
 * Bump default tox env from py37 to py38
 * Add py38 package metadata
